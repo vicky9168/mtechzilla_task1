@@ -2,8 +2,8 @@ import "./Timer.css"
 import React, { useState, useEffect } from 'react';
 
 function Timer() {
-  const [seconds, setSeconds] = useState(10); // 25 minutes in seconds
-  const [breakTime, setBreakTime] = useState(300); // 5 minutes in seconds
+  const [seconds, setSeconds] = useState(1500); // 25 minutes in seconds
+  // const [breakTime, setBreakTime] = useState(300); // 5 minutes in seconds
   const [isActive, setIsActive] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   
@@ -42,14 +42,11 @@ function Timer() {
   // Start the break timer when the 25-minute timer is completed
   useEffect(() => {
     if (seconds === 0) {
-      // breakTime(true)
-      setSeconds(300); // 5 minutes in seconds
+      setSeconds(300); 
       setIsActive(true);
-      setBreakTime(true)
     }
   }, [seconds]);
   
-  // Format the time to display on the screen
   const formatTime = (time) => {
     let minutes = Math.floor(time / 60);
     let seconds = time % 60;

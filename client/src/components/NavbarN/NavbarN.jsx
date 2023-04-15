@@ -46,7 +46,7 @@ const NavbarN = () => {
 
 <Link to='/' className='nav-item nav-links li'>  
 <div className='logout-'>
-<section style={{textDecoration:"none",textAlign:"center",padding:"7px",background:"#009dff",color:"white",borderRadius:'50%'}}>{User.result.username?.charAt(0).toUpperCase()}</section>
+<section style={{textDecoration:"none",textAlign:"center",padding:"8px",background:"#009dff",color:"white",borderRadius:'50%'}}>{User.result.username?.charAt(0).toUpperCase()}</section>
 <Button variant="primary" className='nav-item nav-links' onClick={handleLogout}>LogOut</Button>
 </div>    
 </Link>

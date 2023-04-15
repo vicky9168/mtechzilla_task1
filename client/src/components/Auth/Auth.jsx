@@ -34,6 +34,8 @@ const Auth = () => {
           }
           dispatch(signup({ username, email, password },navigate));
         //  formRef.current.reset();
+        // setIsSignup(!isSignup);
+
         } else {
           dispatch(login({ email, password },navigate));
         //  formRef.current.reset();
