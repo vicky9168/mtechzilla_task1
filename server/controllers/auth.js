@@ -1,10 +1,9 @@
 import jwt  from "jsonwebtoken"
 import bcrypt from 'bcryptjs'
-// import requestIp from 'request-ip'
 
 
 import users from '../models/auth.js'
-// app.use(requestIp.mw());
+
 
 
 export const signup= async(req,res)=>{

@@ -3,7 +3,6 @@ import mongoose from 'mongoose'
 import cors from 'cors'
 import dotenv from 'dotenv'
 import userRoutes from './routes/users.js'
-import userimageRoutes from './routes/userimage.js'
 
 // import auth from './middleware/auth.js'
 dotenv.config();
@@ -13,7 +12,7 @@ app.use(express.urlencoded({limit:'30mb',extended:true}))
 app.use(cors());
 
 app.use('/user',userRoutes)
-app.use('/userimage',userimageRoutes)
+
 
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
