@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 function Timer() {
   const [seconds, setSeconds] = useState(1500); // 25 minutes in seconds
-  const [breakTime, setBreakTime] = useState(false); // 5 minutes in seconds
+  const [breakTime, setBreakTime] = useState(false); 
   const [isActive, setIsActive] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   
@@ -13,11 +13,17 @@ function Timer() {
     setIsPaused(false);
     setBreakTime(false);
   }
+  function handleStart1() {
+    setBreakTime(false);
+    setIsActive(true);
+    setIsPaused(false);
+  }
   
   // Pause the timer
   function handlePause() {
     setIsActive(false);
     setIsPaused(true);
+    
   }
   
   // Reset the timer
@@ -59,14 +65,14 @@ function Timer() {
   return (
     <div className="main-div">
     <section className="sec-1">
-    <h1>Promodoro</h1>
+    <h1>Pomodoro</h1>
     <p>25 minutes for work time & <br /> 5 minutes for break</p>
     {!breakTime ?<h3>Work Time</h3>:<h3>Break Time</h3>}
       <h2>{formatTime(seconds)}</h2>
       <div className="btns">
       {!isActive && !isPaused && <button className="btn1" onClick={handleStart}>Start</button>}
       {isActive && <button className="btn1" onClick={handlePause} >Pause</button>}
-      {isPaused && <button className="btn1" onClick={handleStart} >Resume</button>}
+      {isPaused && <button className="btn1" onClick={handleStart1} >Resume</button>}
       <button onClick={handleReset} className="btn1">Reset</button>
       </div>
       </section>

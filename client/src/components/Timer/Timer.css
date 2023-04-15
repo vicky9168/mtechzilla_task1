@@ -6,6 +6,7 @@
     text-align: center;
    height: 100vh;
   background-color: #009dff;
+  font-family: 'Roboto Condensed', sans-serif;
 
 
 }
@@ -14,7 +15,10 @@
   background-color: aliceblue;
   height: 18rem ;
 }
-
+.sec-1 h1{
+  color:#009dff;
+  font-family: 'Roboto', sans-serif;
+}
 .btns{
 
     display: flex;

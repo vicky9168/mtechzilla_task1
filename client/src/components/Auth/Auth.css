@@ -7,8 +7,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* height: 50vh auto; */
-    /* width: 80vh auto; */
 }
 form label input{
     padding:10px 50px ;
@@ -20,10 +18,6 @@ form label input{
     justify-content: center;
     align-items: center;
     padding: 100px;
-    /* height: 50vh;
-    width: 100vh; */
-   /* min-width: none;  */
-    /* margin-top: 135px; */
     border-radius: 10px;
     background: white;
     box-shadow: 0 10px 25px rgb(0 0 0 / 5%),

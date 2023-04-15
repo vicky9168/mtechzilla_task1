@@ -62,7 +62,6 @@ const Auth = () => {
               />
             </label>
 )}
-          {/* {isSignup && ( */}
 
             <label htmlFor="email">
             <h4>Email</h4>
@@ -75,7 +74,6 @@ const Auth = () => {
               }} 
             />
           </label>
-          {/* // )} */}
 
           <label htmlFor="password">
             <div style={{ display: "flex", justifyContent: "space-between" }}>
