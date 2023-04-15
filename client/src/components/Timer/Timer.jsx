@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 function Timer() {
   const [seconds, setSeconds] = useState(1500); // 25 minutes in seconds
-  // const [breakTime, setBreakTime] = useState(300); // 5 minutes in seconds
+  const [breakTime, setBreakTime] = useState(false); // 5 minutes in seconds
   const [isActive, setIsActive] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   
@@ -11,6 +11,7 @@ function Timer() {
   function handleStart() {
     setIsActive(true);
     setIsPaused(false);
+    setBreakTime(false);
   }
   
   // Pause the timer
@@ -24,6 +25,7 @@ function Timer() {
     setSeconds(1500);
     setIsActive(false);
     setIsPaused(false);
+    setBreakTime(false);
   }
   
   // Count down the seconds
@@ -43,6 +45,7 @@ function Timer() {
   useEffect(() => {
     if (seconds === 0) {
       setSeconds(300); 
+      setBreakTime(true)
       setIsActive(true);
     }
   }, [seconds]);
@@ -58,7 +61,7 @@ function Timer() {
     <section className="sec-1">
     <h1>Promodoro</h1>
     <p>25 minutes for work time & <br /> 5 minutes for break</p>
-    <h3>Timer</h3>
+    {!breakTime ?<h3>Work Time</h3>:<h3>Break Time</h3>}
       <h2>{formatTime(seconds)}</h2>
       <div className="btns">
       {!isActive && !isPaused && <button className="btn1" onClick={handleStart}>Start</button>}
