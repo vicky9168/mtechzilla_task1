@@ -2,7 +2,7 @@ import "./Timer.css"
 import React, { useState, useEffect } from 'react';
 
 function Timer() {
-  const [seconds, setSeconds] = useState(4); // 25 minutes in seconds
+  const [seconds, setSeconds] = useState(1500); // 25 minutes in seconds
   const [breakTime, setBreakTime] = useState(false); 
   const [isActive, setIsActive] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
@@ -33,10 +33,14 @@ function Timer() {
   
   // Reset the timer
   function handleReset() {
-    setSeconds(1500);
     setIsActive(false);
     setIsPaused(false);
-    setBreakTime(false);
+    if(breakTime){
+    setSeconds(300);
+      }else{
+        setSeconds(1500);
+  
+      }
   }
   
   // Count down the seconds
