@@ -40,7 +40,6 @@ function Timer() {
     setSeconds(300);
       }else{
         setSeconds(1500);
-  
       }
   }
   
