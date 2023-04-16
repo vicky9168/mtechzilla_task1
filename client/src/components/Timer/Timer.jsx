@@ -11,7 +11,9 @@ function Timer() {
   function handleStart() {
     setIsActive(true);
     setIsPaused(false);
-    setBreakTime(false);
+    if(!breakTime){
+      setBreakTime(false);
+      }
   }
   function handleStart1() {
     setIsActive(true);
@@ -20,7 +22,6 @@ function Timer() {
     setBreakTime(false);
     }else{
       setBreakTime(true);
-
     }
   }
   
